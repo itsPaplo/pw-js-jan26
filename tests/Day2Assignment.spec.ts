@@ -7,6 +7,7 @@ test("Launch Red Bus in Edge", async () => {
 
   await page1.goto("https://www.redbus.in/");
   console.log(page1.title());
+   console.log(page1.url());
 
   const browser2 = await webkit.launch({ headless: false });
   const context2 = await browser2.newContext();
@@ -14,4 +15,5 @@ test("Launch Red Bus in Edge", async () => {
 
   await page2.goto("https://www.flipkart.com/");
   console.log(page2.title());
+  console.log(page2.url());
 });
